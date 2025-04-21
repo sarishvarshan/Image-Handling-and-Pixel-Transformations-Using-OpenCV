@@ -28,9 +28,9 @@ Display the original, lower contrast, and higher contrast images.
 Split the image (boy.jpg) into B, G, R components and display the channels
 
 ## Program Developed By:
-## Name: SARISH VARSHAN V
+## Name : SARISH VARSHAN V
 
-## Register Number: 212223230196
+## Register Number : 212223230196
 
 ## Ex. No. 01
 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
