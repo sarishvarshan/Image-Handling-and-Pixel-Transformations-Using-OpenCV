@@ -33,7 +33,7 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 ## Register Number : 212223230196
 
 ## Ex. No. 01
-1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
+## 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
 ```
 import cv2
 import numpy as np
@@ -41,32 +41,32 @@ import matplotlib.pyplot as plt
 img =cv2.imread('Eagle_in_Flight.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 ```
-2. Print the image width, height & Channel.
+## 2. Print the image width, height & Channel.
 ```
 img.shape
 ```
-3. Display the image using matplotlib imshow().
+## 3. Display the image using matplotlib imshow().
 ```
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
 plt.imshow(img_gray,cmap='grey')
 plt.show()
 ```
-4. Save the image as a PNG file using OpenCV imwrite().
+## 4. Save the image as a PNG file using OpenCV imwrite().
 ```
 # YOUR CODE HERE
 ```
-5. Read the saved image above as a color image using cv2.cvtColor().
+## 5. Read the saved image above as a color image using cv2.cvtColor().
 ```
 img=cv2.imread('Eagle_in_Flight.jpg')
 cv2.imwrite('Eagle.png',img)
 ```
-7. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
+## 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
 ```
 plt.imshow(img)
 plt.show()
 img.shape
 ```
-8. Crop the image to extract any specific (Eagle alone) object from the image.
+## 7. Crop the image to extract any specific (Eagle alone) object from the image.
 ```
 crop = img_rgb[0:450,200:550] 
 plt.imshow(crop[:,:,::-1])
@@ -75,24 +75,24 @@ plt.axis("off")
 plt.show()
 crop.shape
 ```
-9. Resize the image up by a factor of 2x.
+## 8. Resize the image up by a factor of 2x.
 ```
 res= cv2.resize(crop,(200*2, 200*2))
 ```
-10. Flip the cropped/resized image horizontally.
+## 9. Flip the cropped/resized image horizontally.
 ```
 flip= cv2.flip(res,1)
 plt.imshow(flip[:,:,::-1])
 plt.title("Flipped Horizontally")
 plt.axis("off")
 ```
-11. Read in the image ('Apollo-11-launch.jpg').
+## 10. Read in the image ('Apollo-11-launch.jpg').
 ```
 img=cv2.imread('Apollo-11-launch.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 img_rgb.shape
 ```
-12. Add the following text to the dark area at the bottom of the image (centered on the image):
+## 11. Add the following text to the dark area at the bottom of the image (centered on the image):
 ```
 text = cv2.putText(img_rgb, "Apollo 11 Saturn V Launch, July 16, 1969", (300, 700),cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)  
 plt.imshow(text, cmap='gray')  
@@ -100,32 +100,32 @@ plt.title("New image")
 plt.show()
 ``` 
 
-13. Draw a magenta rectangle that encompasses the launch tower and the rocket.
+## 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
 ```
 rcol= (255, 0, 255)
 cv2.rectangle(img_rgb, (400, 100), (800, 650), rcol, 3)
 ``` 
-14. Display the final annotated image.
+## 13. Display the final annotated image.
 ```
 plt.title("Annotated image")
 plt.imshow(img_rgb)
 plt.show()
 ```
-15. Read the image ('Boy.jpg').
+## 14. Read the image ('Boy.jpg').
 ```
 img =cv2.imread('boy.jpg',cv2.IMREAD_COLOR)
 img_rgb= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 ``` 
-16. Adjust the brightness of the image.
+## 15. Adjust the brightness of the image.
 ```  
 m = np.ones(img_rgb.shape, dtype="uint8") * 50
 ```
-17. Create brighter and darker images.
+## 16. Create brighter and darker images.
 ```
 img_brighter = cv2.add(img_rgb, m)  
 img_darker = cv2.subtract(img_rgb, m)
 ```
-18. Display the images (Original Image, Darker Image, Brighter Image).
+## 17. Display the images (Original Image, Darker Image, Brighter Image).
 ```
 plt.figure(figsize=(10,5))
 plt.subplot(1,3,1), plt.imshow(img_rgb), plt.title("Original Image"), plt.axis("off")
@@ -133,14 +133,14 @@ plt.subplot(1,3,2), plt.imshow(img_brighter), plt.title("Brighter Image"), plt.a
 plt.subplot(1,3,3), plt.imshow(img_darker), plt.title("Darker Image"), plt.axis("off")
 plt.show()
 ```
-19. Modify the image contrast.
+## 18. Modify the image contrast.
 ```    
 matrix1 = np.ones(img_rgb.shape, dtype="float32") * 1.1
 matrix2 = np.ones(img_rgb.shape, dtype="float32") * 1.2
 img_higher1 = cv2.multiply(img.astype("float32"), matrix1).clip(0,255).astype("uint8")
 img_higher2 = cv2.multiply(img.astype("float32"), matrix2).clip(0,255).astype("uint8")
 ```
-20. Display the images (Original, Lower Contrast, Higher Contrast).
+## 19. Display the images (Original, Lower Contrast, Higher Contrast).
 ```    
 plt.figure(figsize=(10,5))
 plt.subplot(1,3,1), plt.imshow(img), plt.title("Original Image"), plt.axis("off")
@@ -148,7 +148,7 @@ plt.subplot(1,3,2), plt.imshow(img_higher1), plt.title("Higher Contrast (1.1x)")
 plt.subplot(1,3,3), plt.imshow(img_higher2), plt.title("Higher Contrast (1.2x)"), plt.axis("off")
 plt.show()
 ```
-21. Split the image (boy.jpg) into the B,G,R components & Display the channels.
+## 20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
 ```    
 b, g, r = cv2.split(img)
 plt.figure(figsize=(10,5))
@@ -157,7 +157,7 @@ plt.subplot(1,3,2), plt.imshow(g, cmap='gray'), plt.title("Green Channel"), plt.
 plt.subplot(1,3,3), plt.imshow(r, cmap='gray'), plt.title("Red Channel"), plt.axis("off")
 plt.show()
 ```
-22. Merged the R, G, B , displays along with the original image
+## 21. Merged the R, G, B , displays along with the original image
  ```   
 merged_rgb = cv2.merge([r, g, b])
 plt.figure(figsize=(5,5))
@@ -166,7 +166,7 @@ plt.title("Merged RGB Image")
 plt.axis("off")
 plt.show()
 ```
-23. Split the image into the H, S, V components & Display the channels.
+## 22. Split the image into the H, S, V components & Display the channels.
 ```   
 hsv_img = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
 h, s, v = cv2.split(hsv_img)
@@ -176,7 +176,7 @@ plt.subplot(1,3,2), plt.imshow(s, cmap='gray'), plt.title("Saturation Channel"),
 plt.subplot(1,3,3), plt.imshow(v, cmap='gray'), plt.title("Value Channel"), plt.axis("off")
 plt.show()
 ```
-24. Merged the H, S, V, displays along with original image.
+## 23. Merged the H, S, V, displays along with original image.
 ```   
 merged_hsv = cv2.cvtColor(cv2.merge([h, s, v]), cv2.COLOR_HSV2RGB)
 combined = np.concatenate((img_rgb, merged_hsv), axis=1)
