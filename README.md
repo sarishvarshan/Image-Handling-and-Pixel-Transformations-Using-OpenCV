@@ -189,54 +189,65 @@ plt.show()
 Output:
 i) Read and Display an Image. 1.Read 'Eagle_in_Flight.jpg' as grayscale and display:
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/dd09093e-a572-405d-953a-0f6993437bbc)
+
 
 
 2.Save image as PNG and display:
+![image](https://github.com/user-attachments/assets/aa05d3a9-de73-4a58-9142-423ba8ebe153)
 
 
 
 3.Cropped image
 
-image
+![image](https://github.com/user-attachments/assets/4f168f12-5dcf-467d-93b7-131371fa8377)
+
 
 4.Resize and flip Horizontally:
 
-image
+![image](https://github.com/user-attachments/assets/00d8d5eb-482d-452e-8130-2a1d95781bfd)
+
 
 5.Read 'Apollo-11-launch.jpg' and Display the final annotated image:
 
-Screenshot 2025-03-11 082700
+![image](https://github.com/user-attachments/assets/c4145e98-1dd1-445c-9986-f5b5d80bfc5b)
+
 
 ii)* Adjust Image Brightness.
 
 1.Create brighter and darker images and display:
 
-image
+![image](https://github.com/user-attachments/assets/0264c5cd-fd8f-4656-a9cc-5ccd1a233ed2)
+
 
 iii) Modify Image Contrast.
 
 1.Modify contrast using scaling factors 1.1 and 1.2
 
-image
+![image](https://github.com/user-attachments/assets/7297df06-3d0b-47b0-a386-6a7494ffe677)
+
 
 iv) Generate Third Image Using Bitwise Operations.
 
 1.Split 'Boy.jpg' into B, G, R components and display:
 
-image
+![image](https://github.com/user-attachments/assets/eee4ed4f-b1f6-4e6b-904f-140797a1ed5d)
+
 
 2.Merge the R, G, B channels and display:
 
-Screenshot 2025-03-11 082425
+![image](https://github.com/user-attachments/assets/692322b3-f30b-40cd-b7a6-f6f0e318474c)
+
 
 3.Split the image into H, S, V components and display:
 
-Screenshot 2025-03-11 082414
+![image](https://github.com/user-attachments/assets/57c6fafb-bce0-4d15-9d7c-cc47be1b2790)
+
 
 4.Merge the H, S, V channels and display:
 
-Screenshot 2025-03-11 082402
+![image](https://github.com/user-attachments/assets/b624009c-3abb-4a9f-b450-0e7ca880cea2)
+
 
 Result:
 Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.
