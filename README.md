@@ -249,5 +249,5 @@ iv) Generate Third Image Using Bitwise Operations.
 ![image](https://github.com/user-attachments/assets/b624009c-3abb-4a9f-b450-0e7ca880cea2)
 
 
-Result:
+## Result:
 Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.
